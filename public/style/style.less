@@ -1,0 +1,71 @@
+@bgc:rgba(105, 205, 71, 0.4);
+@bgcLight: rgba(105, 205, 71, 0.1);
+
+body {
+	margin: 0 ;
+	padding: 0;
+	background-color: @bgcLight;
+	padding-bottom:50px;
+ 
+
+}
+
+.header {
+	display: flex;
+	justify-content:space-around;
+	padding: 0 150px;
+	background-color: @bgc;
+	&-nav {
+		display: flex;
+		align-items: center;
+		a{text-decoration: none;
+		border: 1px solid #666;
+		padding: 7px;
+		border-radius: 5px;
+		margin: 5px;	
+		}
+	}
+	&-logo {
+		display: flex;
+		align-items: center;
+		
+		a { 
+
+			img {height: 100px;
+				cursor: pointer;
+				}
+		}
+	}
+	&-cart {
+		cursor:pointer ;
+		display: flex;
+		align-items: center;
+		form {cursor: pointer;}
+		a {
+			img {
+			height: 35px;
+			cursor: pointer;
+			}
+		}
+		
+
+	}
+}
+
+@btnColor:#00ED63;
+.button {
+	padding: 12px 17px;
+	border-style: none;
+	background-color: @btnColor;
+	margin: 10px 0;
+	&:hover {
+		background-color:#0CED00;
+		transform: scale(1.05)
+	}
+	&:active {
+		transform: scale(0.9)
+	}
+
+
+}
+

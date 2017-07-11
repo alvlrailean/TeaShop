@@ -1,0 +1,17 @@
+.products {
+  display: flex;
+  justify-content: center;
+}
+.products-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  flex-wrap: wrap;
+}
+.products-wrapper--item {
+  width: 250px;
+  margin: 25px;
+}
+.products-wrapper--item---img {
+  height: 150px;
+}

@@ -31,53 +31,16 @@ get '/prodDetails/:id' do
 end
 
 get '/cart' do
-	info = params[:fromLS]
-
-@arr = pars_info info
-@totalIt=0
-@totalPrice = 0
-
-@arr.each do |item|
-	tit = Product.find item[0]
-	item[0] = tit.title
-	item[2] = tit.price
-	@totalIt += item[1].to_i 
-	@totalPrice += item[2]
 	
 	erb :cart
-end
+
 end
 
 post '/cart' do
-	info = params[:fromLS]
+	@info = params[:fromLS]
+	
 
-@arr = pars_info info
-@totalIt=0
-@totalPrice = 0
-
-@arr.each do |item|
-	tit = Product.find item[0]
-	item[0] = tit.title
-	item[2] = tit.price
-	@totalIt += item[1].to_i 
-	@totalPrice += item[2]
-end
 
 erb :cart
 end
 
-def pars_info info
-arr = []
-arr2 = []
-arr = info.split('|')
-
-arr.each do |i|
-	i.gsub!('tea_','')
-	arr2 << i.split('$')
-
-end
-
-
-return arr2
-
-end
